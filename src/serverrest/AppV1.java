@@ -27,6 +27,6 @@ public class AppV1 {
         }
         
         // Avvia il server REST
-        ServerRest.avviaServer(porta);
+        ServerRestV1.avviaServer(porta);
     }
 }
