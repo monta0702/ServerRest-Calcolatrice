@@ -50,6 +50,10 @@ public class CalcolatriceServiceV1 {
             case "MODULO":
             case "|":
                 return operando1 % operando2;
+                
+            case "RADICE":
+            case "V":
+                return Math.pow(operando1, 1.0 / operando2);
             
                 
             case "DIVISIONE":
@@ -62,7 +66,7 @@ public class CalcolatriceServiceV1 {
             default:
                 throw new IllegalArgumentException(
                     "Operatore non valido: " + operatore + 
-                    ". Operatori consentiti: SOMMA, SOTTRAZIONE, MOLTIPLICAZIONE, DIVISIONE, POTENZA, MODULO"
+                    ". Operatori consentiti: SOMMA, SOTTRAZIONE, MOLTIPLICAZIONE, DIVISIONE, POTENZA, MODULO, RADICE"
                 );
         }
     }
