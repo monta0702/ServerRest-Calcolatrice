@@ -24,7 +24,7 @@ import java.util.Map;
  */
 
 
-public class GetHandlerV1 implements HttpHandler {
+public class GetHandlerV2 implements HttpHandler {
     
     // Istanza Gson configurata per pretty printing
     private final Gson gson = new GsonBuilder()
@@ -59,10 +59,10 @@ public class GetHandlerV1 implements HttpHandler {
             String operatore = parametri.get("operatore");
             
             // Esegue il calcolo
-            double risultato = CalcolatriceServiceV1.calcola(operando1, operando2, operatore);
+            double risultato = CalcolatriceServiceV2.calcola(operando1, operando2, operatore);
             
             // Crea l'oggetto risposta
-            OperazioneResponseV1 response = new OperazioneResponseV1(
+            OperazioneResponseV2 response = new OperazioneResponseV2(
                 operando1,
                 operando2,
                 operatore,

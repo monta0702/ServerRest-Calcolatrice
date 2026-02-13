@@ -8,7 +8,7 @@ package serverrest;
  *
  * @author delfo
  */
-public class CalcolatriceServiceV1 {
+public class CalcolatriceServiceV2 {
     
     /**
      * Esegue l'operazione matematica richiesta
