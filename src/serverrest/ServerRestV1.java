@@ -92,6 +92,7 @@ public class ServerRestV1 {
         operatori.put("moltiplicazione", "MOLTIPLICAZIONE o * o X");
         operatori.put("divisione", "DIVISIONE o /");
         operatori.put("potenza", "POTENZA o ' ");
+        operatori.put("modulo","MODULO o |");
         info.put("operatori_supportati", operatori);
         
         String jsonRisposta = gson.toJson(info);
