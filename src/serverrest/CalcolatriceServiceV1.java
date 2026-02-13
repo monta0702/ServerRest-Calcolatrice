@@ -43,6 +43,10 @@ public class CalcolatriceServiceV1 {
             case "X":
                 return operando1 * operando2;
                 
+            case "POTENZA":
+            case "'":
+                return Math.pow(operando1, operando2);
+                
             case "DIVISIONE":
             case "/":
                 if (operando2 == 0) {
@@ -53,7 +57,7 @@ public class CalcolatriceServiceV1 {
             default:
                 throw new IllegalArgumentException(
                     "Operatore non valido: " + operatore + 
-                    ". Operatori consentiti: SOMMA, SOTTRAZIONE, MOLTIPLICAZIONE, DIVISIONE"
+                    ". Operatori consentiti: SOMMA, SOTTRAZIONE, MOLTIPLICAZIONE, DIVISIONE, POTENZA"
                 );
         }
     }

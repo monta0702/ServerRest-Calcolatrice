@@ -56,7 +56,7 @@ public class ServerRestV1 {
             System.out.println("  - Info: http://localhost:" + porta + "/");
             System.out.println();
             System.out.println("Operatori supportati:");
-            System.out.println("  SOMMA, SOTTRAZIONE, MOLTIPLICAZIONE, DIVISIONE");
+            System.out.println("  SOMMA, SOTTRAZIONE, MOLTIPLICAZIONE, DIVISIONE, POTENZA");
             System.out.println();
             System.out.println("Premi Ctrl+C per fermare il server");
             System.out.println("==============================================");
@@ -91,6 +91,7 @@ public class ServerRestV1 {
         operatori.put("sottrazione", "SOTTRAZIONE o -");
         operatori.put("moltiplicazione", "MOLTIPLICAZIONE o * o X");
         operatori.put("divisione", "DIVISIONE o /");
+        operatori.put("potenza", "POTENZA o ' ");
         info.put("operatori_supportati", operatori);
         
         String jsonRisposta = gson.toJson(info);
